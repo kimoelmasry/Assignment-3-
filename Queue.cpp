@@ -21,7 +21,7 @@ public:
 
 			rear++;
 		appointments[rear] = val;
-		count++;
+		pos++;
 
 
 	}
@@ -29,9 +29,17 @@ public:
 	{
 		T popped = arr[front];
 		front--;
-		count--; 
+		pos--; 
 		cout << popped << "is removed";
 
 	}
 	
+	bool isEmpty()
+	{
+		return pos == 0;
+	}
+	bool isFull()
+	{
+		return pos == 10;
+	}
 };
