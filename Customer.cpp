@@ -22,3 +22,16 @@ void Customer::printInfo()
 
 
 }
+Person::Appointment Customer::viewApp()
+{
+
+	return app;
+}
+
+void Customer::setApp(int hrr, int mnn)
+{
+	app.hours == hrr;
+	app.min == mnn;
+
+
+}

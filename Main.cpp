@@ -20,8 +20,8 @@ int main()
 	WorkForce[2].setID(4783);
 	WorkForce[2].setAge(45);	
 
-	Customer Clients[4];
-	for (int i = 0; i < 4; i++)
+	Customer Clients[7];
+	for (int i = 0; i < 7; i++)
 	{
 		string n;
 		int id;
@@ -31,6 +31,30 @@ int main()
 		Clients[i].setID(id);
 		Clients[i].setAge(age);
 	}
+	for (int i = 0; i < 7; i++)
+	{
+
+		int hr, mn;
+		cout << "Select an hour in the day you would like:";
+		cin >> hr;
+		cout << "Select a the precise minute in the day you would like:";
+		cin >> mn;
+		Clients[i].setApp(hr, mn);
+	}
+	int c = 0;
+	for (int j = 0; j < 4; j++)
+		{
+			
+			if (WorkForce[c].isAvail(Clients[c].viewApp()))
+			{
+				Clients[c].setMech(WorkForce[j].getID());
+				c++;
+			}
+	
+
+		}
+
+	
 
 
 }
